@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei";
+}
+
+body {
+  background: #333;
+  color: #fff;
+}
+
+#info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#intro {
+  font-size: 14px;
+}
+
+#scoreboard {
+  font-size: 24px;
+}
+
+#playroom {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 10px auto;
+}
+
+#playroom p {
+  font-weight: bolder;
+  text-align: center; 
+  font-size: 28px; 
+  color: #99CCFF;
+  margin-bottom: 10px;
+}
+
+#gamezone {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+#menu, #message, #pause, #countdown {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 100px;
+  
+}
+
+#message, #pause, #countdown {
+  background: #333;
+  opacity: 0.5;
+}
+
+table {
+  /*border: 1px solid #ccc;*/
+  border-collapse: collapse;
+}
+
+td {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+}
+
+button {
+  display: block;
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  margin: 20px auto;
+  /*background: #e74f4d;*/
+  border-radius: 10px;
+  border: none;
+  /*color: #fff;*/
+  font-size: 16px;
+  outline: none;
+}
+
+button:hover {
+  color: #fff;
+  background: #e74f4d;
+  cursor: pointer;
+}
+
+.food {
+  border-radius: 50%;
+}
+
+.obstacle {
+  background: #000;
+}
