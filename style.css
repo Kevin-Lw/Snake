@@ -100,3 +100,27 @@ button:hover {
 .obstacle {
   background: #000;
 }
+
+#difficulty {
+  width: 600px;
+  padding-left: 160px;
+}
+
+#difficulty > span {
+  font-size: 18px;
+  color: #000;
+  width: 60px;
+  height: 30px;
+}
+
+#difficulty > button {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin: 0;
+}
+
+.selected {
+  color: #fff;
+  background: #e74f4d;
+}

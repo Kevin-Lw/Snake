@@ -13,7 +13,8 @@ var snakeTimer;
 var speedTimer;
 var gameMode;
 var time = 3;
-var speed = 300;
+var speed = 200;
+var obstacleNum = 10;
 
 function $(id) {
   return document.getElementById(id);
@@ -250,7 +251,7 @@ function obstacleMode() {
   clearInterval(snakeTimer);
   snakeTimer = null;
   gameMode = "obstacleMode";
-  initObstacle(10, carrier);
+  initObstacle(obstacleNum, carrier);
   startGame(time);
 }
 
@@ -271,7 +272,7 @@ function playAgain() {
     $("gamezone").innerHTML = "";
     clearAll();
     initGame();
-    initObstacle(10, carrier);
+    initObstacle(obstacleNum, carrier);
     clearInterval(snakeTimer);
     snakeTimer = null;
     startGame(time);
@@ -304,8 +305,9 @@ function startGame(time) {
 
   if (time == 0) {
     $("countdown").style.display = "none";
-    snakeTimer = setInterval(function() {snakeMove();}, 100);
+    snakeTimer = setInterval(function() {snakeMove();}, speed);
     $("audio1").play();
+
   }
   else {
     time--;
@@ -315,20 +317,28 @@ function startGame(time) {
   }
 }
 
-function speedUp() {
-  // var snakeLength = snakeGrid.length;
-  // if(snakeLength > 10 && snakeLength =< 20) {
-  //   speed = 150;
-  // }
-  // else if(snakeLength > 20 && snakeLength =< 30) {
-  //   speed = 100;
-  // }
-  // else if(snakeLength > 30 && snakeLength =< 40) {
-  //   speed = 75;
-  // }
-  // else if(snakeLength > 40) {
-  //   speed = 50;
-  // }
+function difficulty(d) {
+  var btns = document.querySelectorAll("#difficulty > button");
+  for (var i=0; i<btns.length; i++) {
+    btns[i].className = "";
+  }
+  switch(d) {
+    case "easy":
+      btns[0].className = "selected";
+      speed = 200;
+      obstacleNum = 10;
+      break;
+    case "medium":
+      btns[1].className = "selected";
+      speed = 100;
+      obstacleNum = 15;
+      break;
+    case "hard":
+      btns[2].className = "selected";
+      speed = 50;
+      obstacleNum = 20;
+      break;
+  }
 }
 
 window.onload = function() {

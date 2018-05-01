@@ -21,6 +21,12 @@
       <p>贪吃蛇大作战</p>
       <button id="classic" onclick="classcialMode()">经典模式</button>
       <button id="obstacle" onclick="obstacleMode()">障碍模式</button>
+      <div id="difficulty">
+        <span>难度：</span>
+        <button id="easy" class="selected" onclick="difficulty(this.id)">简单</button>
+        <button id="medium" onclick="difficulty(this.id)">中等</button>
+        <button id="hard" onclick="difficulty(this.id)">困难</button>
+      </div>
     </div>
 
     <div id="message" style="display: none;">
