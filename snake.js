@@ -335,7 +335,7 @@ function difficulty(d) {
       break;
     case "hard":
       btns[2].className = "selected";
-      speed = 50;
+      speed = 65;
       obstacleNum = 20;
       break;
   }

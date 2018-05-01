@@ -11,12 +11,12 @@ body {
 }
 
 #info {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
 }
 
 #intro {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #scoreboard {
@@ -36,6 +36,10 @@ body {
   font-size: 28px; 
   color: #99CCFF;
   margin-bottom: 10px;
+}
+
+#playroom #p-2 {
+  font-size: 20px;
 }
 
 #gamezone {
